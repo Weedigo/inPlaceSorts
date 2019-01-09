@@ -37,6 +37,7 @@ public class inPlaceSorts {
     public static void insertionSort(int[] list1) {
 
 
+
     }
 
 

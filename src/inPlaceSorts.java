@@ -65,7 +65,7 @@ public class inPlaceSorts {
         }
 
 
-    public static String printArray(int[] arr)
+    public static String printArray(String[] arr)
     {
         String result = "";
         for(int i=0; i<arr.length; i++)

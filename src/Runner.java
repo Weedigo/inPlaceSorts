@@ -2,7 +2,7 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        String[] randomStringArray = new inPlaceSorts().randomStringArr(5,5);
+        String[] randomStringArray = inPlaceSorts.randomStringArr(5,5);
         long time = System.nanoTime();
         inPlaceSorts.bubbleSort(randomStringArray);
         time = System.nanoTime() - time;

@@ -2,23 +2,23 @@ public class inPlaceSorts {
 
     public static void swapString(String[] list1, int i, int j) {
         String temp = list1[i];
-        list1[j] = list1[i];
-        list1[i] = temp;
+        list1[i] = list1[j];
+        list1[j] = temp;
     }
     public static void swapDouble(double[] list1, int i, int j) {
         double temp = list1[i];
-        list1[j] = list1[i];
-        list1[i] = temp;
+        list1[i] = list1[j];
+        list1[j] = temp;
     }
     public static void swapInt(int[] list1, int i, int j) {
         int temp = list1[i];
-        list1[j] = list1[i];
-        list1[i] = temp;
+        list1[i] = list1[j];
+        list1[j] = temp;
     }
 
-    public static void selectionSort(double[] list1) {
+    public static double[] selectionSort(double[] list1) {
         int minPos;
-        for (int curPos = 0; curPos < list1.length - 1; curPos++) {
+        for (int curPos = 0; curPos < list1.length -1; curPos++) {
             double minVal = list1[curPos];
             minPos = curPos;
             for (int i = curPos + 1; i < list1.length; i++)
@@ -30,15 +30,20 @@ public class inPlaceSorts {
             }
             swapDouble(list1, curPos, minPos);
         }
+        return list1;
     }
 
-    public static void bubbleSort(String[] list1) {
-        int x = list1.length;
-        for (int i = 0; i < x - 1; i++) {
-            for (int j = 0; j < x - i - 1; j++) {
-                if (list1[j].compareTo(list1[j + 1]) > 0) {
-                    swapString(list1, i, j);
 
+
+    public static void bubbleSort(String[] list1) {
+        int x=list1.length;
+        int y=-1;
+        while(y!=0) {
+            y=0;
+            for(int j=0; j<x-1;j++){
+                if(list1[j].compareTo(list1[j+1]) >0) {
+                    inPlaceSorts.swapString(list1,j,j+1);
+                    y= y+1;
                 }
             }
         }
@@ -47,7 +52,7 @@ public class inPlaceSorts {
     public static void insertionSort(int[] list1) {
         for (int i = 0; i < list1.length; i++)
         {
-            for (int j = i; j > 0; j--)
+            for (int j = i; j >0; j--)
             {
                 if (list1[j] < list1[j - 1])
                 {
@@ -60,7 +65,7 @@ public class inPlaceSorts {
         }
     }
 
-    public String[] randomStringArr(int num, int length) {
+    public static String[] randomStringArr(int num, int length) {
         String[] arr = new String[num];
         while (num > 0) {
             int i = 0;

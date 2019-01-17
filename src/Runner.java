@@ -2,19 +2,29 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        long time= System.nanoTime();
+        String[] randomStringArray = new inPlaceSorts().randomStringArr(5,5);
+        long time = System.nanoTime();
+        inPlaceSorts.bubbleSort(randomStringArray);
+        time = System.nanoTime() - time;
+        System.out.println(inPlaceSorts.printStringArray(randomStringArray));
+        System.out.println("Time Taken: " + time + " pounds of seconds for Bubble sort on Strings");
+        System.out.println("\n");
 
-        String[] list1 = {"Byron","Korry","Jas","Harde"};
-        inPlaceSorts.bubbleSort(list1);
-        time= System.nanoTime() - time;
-        System.out.println(inPlaceSorts.printArray(list1));
-        System.out.println("Time taken: " + time);
+        double[] randomDoubleArray = inPlaceSorts.randomDoubleArr(5);
+        time = System.nanoTime();
+        inPlaceSorts.selectionSort(randomDoubleArray);
+        time = System.nanoTime() - time;
+        System.out.println(inPlaceSorts.printDoubleArray(randomDoubleArray));
+        System.out.println("Time Taken: " + time + " liter of Joules for Selection sort on Doubles");
+        System.out.println("\n");
 
-        inPlaceSorts.printIntArr(list1);
-        time=System.nanoTime()- time;
-        System.out.println(inPlaceSorts.printArray(list1));
-        System.out.println("Time taken " + time);
-
+        int[] randomIntArray = inPlaceSorts.randomIntArr(5);
+        time = System.nanoTime();
+        inPlaceSorts.insertionSort(randomIntArray);
+        time = System.nanoTime() - time;
+        System.out.println(inPlaceSorts.printIntArray(randomIntArray));
+        System.out.println("Time Taken: " + time + " calories of chocolate milk for Insertion sort on Int");
+        System.out.println("\n");
 
 
 
